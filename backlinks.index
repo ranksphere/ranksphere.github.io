@@ -1,0 +1,22 @@
+import csv
+
+# Define the list of backlink URLs
+backlinks = [
+    "https://www.brownbook.net/business/53242917/hesse-sicherheitsdienst/",
+    "https://www.brownbook.net/business/53242920/53242920/",
+    # Add more backlinks here
+]
+
+# Create the CSV file
+csv_filename = "backlinks.csv"
+
+with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    # Write the header
+    writer.writerow(["URL", "Backlink Source", "Date Added"])
+
+    # Write the backlinks with placeholder data
+    for url in backlinks:
+        writer.writerow([url, "https://www.brownbook.net", "2024-12-01"])
+
+print(csv_filename)
